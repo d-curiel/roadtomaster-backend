@@ -4,10 +4,9 @@ import { Champion } from "./champion.entity";
 
 @Entity('champion_attributes')
 export class ChampionAttribute {
-  constructor(tier, value, kind) {
+  constructor(tier, value) {
     this.tier = tier;
     this.value = value;
-    this.kind = kind;
   }
 
   @PrimaryGeneratedColumn()
@@ -19,9 +18,6 @@ export class ChampionAttribute {
   @Column()
   value: string;
 
-  @Column()
-  kind: string;
-
   @OneToOne(
     () => AttributeKind, {
         eager: true
@@ -29,7 +25,7 @@ export class ChampionAttribute {
   )  @JoinColumn({
     name: 'id_attribute_kind',
   })
-  attributekind: AttributeKind;
+  attributeKind: AttributeKind;
 
   @ManyToOne(() => Champion, champion => champion.attributes)
   @JoinColumn({

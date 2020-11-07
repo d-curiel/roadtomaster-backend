@@ -1,12 +1,16 @@
-import { AttributeKindDto } from "./attribute-kind.dto";
+import { ApiProperty } from '@nestjs/swagger';
+import { AttributeKindDto } from './attribute-kind.dto';
 
 export class ChampionAttributeDto {
-    
-    tier: string;
+  @ApiProperty()
+  tier: string;
 
-    value: string;
+  @ApiProperty()
+  value: string;
 
-    kind: string;
+  @ApiProperty()
+  kind: string;
 
-    attributekind : AttributeKindDto;
+  @ApiProperty()
+  attributeKind: AttributeKindDto;
 }

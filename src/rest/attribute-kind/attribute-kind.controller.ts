@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { AttributeKindDto } from 'src/dtos/attribute-kind.dto';
-import { AttributeKind } from 'src/entities/attribute-kind.entity';
-import { Connection } from 'typeorm';
 import { AttributeKindService } from './attribute-kind.service';
 
+@ApiTags('attribute-kind')
 @Controller('attribute-kind')
 export class AttributeKindController {
   constructor(private service: AttributeKindService) {}

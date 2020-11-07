@@ -1,5 +1,9 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class TraitAttributeDto {
-    tier: string;
-  
-    value: number;
+  @ApiProperty()
+  tier: string;
+
+  @ApiProperty()
+  value: number;
 }

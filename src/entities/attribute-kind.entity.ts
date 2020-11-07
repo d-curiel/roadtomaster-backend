@@ -6,6 +6,7 @@ import { UltimateAttribute } from './ultimate-attribute.entity';
 @Entity('attribute_kind')
 export class AttributeKind {
   constructor(name, unit, kind) {
+    this.id = null;
     this.name = name;
     this.unit = unit;
     this.kind = kind;
@@ -22,7 +23,7 @@ export class AttributeKind {
   @Column()
   kind: string;
 
-  @OneToMany(() => ChampionAttribute, championAttribute => championAttribute.kind)
+  @OneToMany(() => ChampionAttribute, championAttribute => championAttribute.attributeKind)
   championAttributes: ChampionAttribute[];
   
   @OneToMany(() => UltimateAttribute, ultimateAttribute => ultimateAttribute.kind)

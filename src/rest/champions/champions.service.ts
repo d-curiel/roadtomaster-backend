@@ -26,7 +26,7 @@ export class ChampionsService {
     try {
       champion.ultimate = ultimate;
       champion.traits = traits;
-      champion.attributes =championAttributes;
+      champion.attributes = championAttributes;
       championCreated = await queryRunner.manager.save(champion);
       await queryRunner.commitTransaction();
     } catch (err) {

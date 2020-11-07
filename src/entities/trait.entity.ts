@@ -13,6 +13,7 @@ import { TraitAttribute } from './trait-attribute.entity';
 @Entity('traits')
 export class Trait {
   constructor(name: string, description: string, icon: string, kind: string) {
+    this.id = null;
     this.name = name;
     this.description = description;
     this.icon = icon;
