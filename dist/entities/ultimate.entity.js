@@ -1,0 +1,57 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ultimate = void 0;
+const typeorm_1 = require("typeorm");
+const champion_entity_1 = require("./champion.entity");
+const ultimate_attribute_entity_1 = require("./ultimate-attribute.entity");
+let Ultimate = class Ultimate {
+    constructor(name, description, kind, icon) {
+        this.name = name;
+        this.description = description;
+        this.icon = icon;
+        this.kind = kind;
+    }
+};
+__decorate([
+    typeorm_1.PrimaryGeneratedColumn(),
+    __metadata("design:type", Number)
+], Ultimate.prototype, "id", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Ultimate.prototype, "name", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Ultimate.prototype, "description", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Ultimate.prototype, "kind", void 0);
+__decorate([
+    typeorm_1.Column({ length: 1 }),
+    __metadata("design:type", String)
+], Ultimate.prototype, "icon", void 0);
+__decorate([
+    typeorm_1.OneToOne(() => champion_entity_1.Champion, champion => champion.ultimate),
+    __metadata("design:type", champion_entity_1.Champion)
+], Ultimate.prototype, "champion", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => ultimate_attribute_entity_1.UltimateAttribute, ultimateAttribute => ultimateAttribute.ultimate, { cascade: ['insert'] }),
+    __metadata("design:type", Array)
+], Ultimate.prototype, "attributes", void 0);
+Ultimate = __decorate([
+    typeorm_1.Entity('ultimates'),
+    __metadata("design:paramtypes", [Object, Object, Object, Object])
+], Ultimate);
+exports.Ultimate = Ultimate;
+//# sourceMappingURL=ultimate.entity.js.map
