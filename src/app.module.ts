@@ -15,16 +15,13 @@ import { ChampionsModule } from './rest/champions/champions.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'PMYSQL139.dns-servicio.com',
+      host: 'localhost',
       port: 3306,
       username: 'loldev',
-      password: 'Z187qoz&',
-      database: '7939201_roadtomaster',
+      password: '123456',
+      database: 'roadtomaster_dev',
       entities: [Champion, Ultimate, AttributeKind, ChampionAttribute, Trait, TraitAttribute, UltimateAttribute],
       synchronize: false,
-      extra: {
-        ssl: true
-   }
     }),ChampionsModule, AttributeKindModule, TraitsModule],
   controllers: [],
   providers: [],

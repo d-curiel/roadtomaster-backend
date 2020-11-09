@@ -26,11 +26,11 @@ AppModule = __decorate([
         imports: [
             dist_1.TypeOrmModule.forRoot({
                 type: 'mysql',
-                host: 'PMYSQL139.dns-servicio.com',
+                host: 'localhost',
                 port: 3306,
                 username: 'loldev',
-                password: 'Z187qoz&',
-                database: '7939201_roadtomaster',
+                password: '123456',
+                database: 'roadtomaster_dev',
                 entities: [champion_entity_1.Champion, ultimate_entity_1.Ultimate, attribute_kind_entity_1.AttributeKind, champion_attribute_entity_1.ChampionAttribute, trait_entity_1.Trait, trait_attribute_entity_1.TraitAttribute, ultimate_attribute_entity_1.UltimateAttribute],
                 synchronize: false,
             }), champions_module_1.ChampionsModule, attribute_kind_module_1.AttributeKindModule, traits_module_1.TraitsModule

@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  /*app.enableCors();
+  app.enableCors();
 
   const options = new DocumentBuilder()
     .setTitle('Roat to Master')
@@ -14,8 +14,7 @@ async function bootstrap() {
     .addTag('champions')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('swagger', app, document);*/
-
+  SwaggerModule.setup('swagger', app, document);
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
