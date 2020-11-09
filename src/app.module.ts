@@ -22,6 +22,9 @@ import { ChampionsModule } from './rest/champions/champions.module';
       database: '7939201_roadtomaster',
       entities: [Champion, Ultimate, AttributeKind, ChampionAttribute, Trait, TraitAttribute, UltimateAttribute],
       synchronize: false,
+      extra: {
+        ssl: true
+   }
     }),ChampionsModule, AttributeKindModule, TraitsModule],
   controllers: [],
   providers: [],
