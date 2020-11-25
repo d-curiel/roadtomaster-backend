@@ -1,6 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { TraitAttribute } from "src/entities/trait-attribute.entity";
-import { TraitAttributeDto } from "./trait-attribute-dto";
+import { TraitSetDto } from "./trait-set.dto";
 
 export class TraitDto {
     @ApiProperty()
@@ -13,6 +12,6 @@ export class TraitDto {
     icon: string;
     @ApiProperty()
     kind: string;
-    @ApiProperty()
-    attributes: TraitAttributeDto[];
+    @ApiProperty({ type: () => [TraitSetDto] })
+    sets: TraitSetDto[];
 }

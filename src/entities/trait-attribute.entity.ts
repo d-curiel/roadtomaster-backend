@@ -1,20 +1,17 @@
 import { ManyToOne, JoinColumn, Entity, PrimaryGeneratedColumn, Column, OneToOne } from "typeorm";
 import { AttributeKind } from "./attribute-kind.entity";
+import { TraitSet } from "./trait-set.entity";
 import { Trait } from "./trait.entity";
 
 @Entity('trait_attributes')
 export class TraitAttribute {
 
-  constructor(tier, value) {
-    this.tier = tier;
+  constructor(value) {
     this.value = value;
   }
 
   @PrimaryGeneratedColumn()
   id: number;
-
-  @Column()
-  tier: string;
 
   @Column()
   value: number;
@@ -28,11 +25,11 @@ export class TraitAttribute {
   kind: AttributeKind;
 
   @ManyToOne(
-    () => Trait,
+    () => TraitSet,
     trait => trait.attributes,
   )
   @JoinColumn({
-    name: 'id_trait',
+    name: 'id_trait_set',
   })
-  trait: Trait;
+  set: TraitSet;
 }

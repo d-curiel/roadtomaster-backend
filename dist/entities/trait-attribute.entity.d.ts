@@ -1,10 +1,9 @@
 import { AttributeKind } from "./attribute-kind.entity";
-import { Trait } from "./trait.entity";
+import { TraitSet } from "./trait-set.entity";
 export declare class TraitAttribute {
-    constructor(tier: any, value: any);
+    constructor(value: any);
     id: number;
-    tier: string;
     value: number;
     kind: AttributeKind;
-    trait: Trait;
+    set: TraitSet;
 }

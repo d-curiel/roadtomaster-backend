@@ -37,6 +37,7 @@ __decorate([
 ], TraitsController.prototype, "findAll", null);
 __decorate([
     request_mapping_decorator_1.Post(),
+    swagger_1.ApiBody({ type: [trait_dto_1.TraitDto] }),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [trait_dto_1.TraitDto]),

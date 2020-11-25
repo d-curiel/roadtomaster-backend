@@ -2472,13 +2472,18 @@
         "affectsGlobalScope": false
       },
       "../src/entities/trait.entity.ts": {
-        "version": "04b7b9d3873faf86d9abc51dd748bdcc69be87e2774ff14c0ebee3fc1b3ab701",
-        "signature": "690ecc93cb219bfdee7cbd9919e94c2f483e1f97ddebce81450dc50cbc473faf",
+        "version": "a99aa9ccf6a05ec2a88e830698d1c95ebcd5498b169f14bcbc4fc8854e0045b7",
+        "signature": "758542c937e13b20a3da872df9a168b452c17f82688ac5eebd57d211ef9b0a18",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/trait-set.entity.ts": {
+        "version": "37a7471b6fbf096d4bc8556856bed0895f97cfea0f396d480246fc6954257e8c",
+        "signature": "5fa637aaa128d7c46780e54fc4f90b52f57e5c5820c99e2e3e48f52b1e1f8a43",
         "affectsGlobalScope": false
       },
       "../src/entities/trait-attribute.entity.ts": {
-        "version": "6ded2e88a692769dcdfb875c334fc74f2632385b35cd06f5f7c024d46786cce4",
-        "signature": "4a33acccd821c58c962f00d273b1f17f263cf6329d00a6beebfee681e051471f",
+        "version": "503d62f42a2a8f8cdc93c3a07900ac8957bf505ab6fc2ac98276503af6417d78",
+        "signature": "4f90e018f2a4f6faae2c58cfda7c10d3eb334dd2c0e6f8350def878c93cb471f",
         "affectsGlobalScope": false
       },
       "../src/entities/attribute-kind.entity.ts": {
@@ -2707,22 +2712,27 @@
         "affectsGlobalScope": false
       },
       "../src/dtos/trait-attribute-dto.ts": {
-        "version": "5212bebdd6d561aa2f6867ee3efdb512d8d37f6d9f1c75d65d98ddf71e307ee5",
-        "signature": "3ae0ef711b6820d95b47537f26eeba4f2f0b09d0c40f09cede88d74c46804182",
+        "version": "f819c70ff651e35d006281566054bdc32f173b2040d93384784aa76c930524ec",
+        "signature": "a08508eb6e5e8db5142aa277dd9739a6f3719409e428aecbd32ab297c13b1c9f",
+        "affectsGlobalScope": false
+      },
+      "../src/dtos/trait-set.dto.ts": {
+        "version": "44fb15d66f5ae1dc62d8dccb676e2bbb82b40ee6f42a94ac1fdb7deca0ccda6e",
+        "signature": "3a247d70d1846c112a3fc78c159d62e76c519b9d8d941c0ef0756c1bc30d7956",
         "affectsGlobalScope": false
       },
       "../src/dtos/trait.dto.ts": {
-        "version": "60aed98a7da6c0370b454ddd6f13a1c0147ee8160bc7f72aab83feeeb3c8a6ae",
-        "signature": "d0db99a5726980c24779a3a1d28bb2794069d115a52f6464553f0d257c23c56a",
+        "version": "afbe9791590e1c14458c28670f79849bdff3652cbb1c687bac6447572a70f5ec",
+        "signature": "5e75350e6f96ca126ec6fd7c8960e0205f7512be72e2e063ba89cacf5f0aaa00",
         "affectsGlobalScope": false
       },
       "../src/rest/traits/traits.service.ts": {
-        "version": "2df351348878a74fa1b8145188afd54851182255a15a75985f6def863f260f69",
+        "version": "785c658ac8d16f769194f1a2ffe938fb6e5010f681c31a25587f757766611d69",
         "signature": "574644684da1725d16a85e3e242565759e7379b84bba365e6e0eb5d6d8132e81",
         "affectsGlobalScope": false
       },
       "../src/rest/traits/traits.controller.ts": {
-        "version": "7c5c1efc7069545fbaf4fdee4d0a86f7bcbe5d182d8dffbe342b092b85e6b736",
+        "version": "8d3c5cda73e0c98044848a2d8f7347365a309d94da92bfc9ed54b3dbf6d23ac3",
         "signature": "a1abe3525103bd0c1591c3eef6e717eb72e58776922825b0696adf50eabe3348",
         "affectsGlobalScope": false
       },
@@ -2762,7 +2772,7 @@
         "affectsGlobalScope": false
       },
       "../src/rest/champions/champions.controller.ts": {
-        "version": "5702e11e08c9c76aaadf26f640b95fa9fd322b1fb93f64c49940476b9b81381e",
+        "version": "bb6192fbb174e81e9284c13eb8971fa85528a9b21335beb54b3a233870d8014e",
         "signature": "cebd61938b1abb7f628d36b804e7649c54adc5ccb0de55a742da5d99af6a0068",
         "affectsGlobalScope": false
       },
@@ -2772,7 +2782,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "77228befffcc39fc96601b3a749969ee1a41f96205f506d2a224d991a6820f86",
+        "version": "4f07870a1450afacf58ace8ceb71f46cf83523b035e2570bb12452f230af26d8",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -5959,6 +5969,7 @@
         "../src/entities/champion-attribute.entity.ts",
         "../src/entities/champion.entity.ts",
         "../src/entities/trait-attribute.entity.ts",
+        "../src/entities/trait-set.entity.ts",
         "../src/entities/trait.entity.ts",
         "../src/entities/ultimate-attribute.entity.ts",
         "../src/entities/ultimate.entity.ts",
@@ -5982,10 +5993,13 @@
       "../src/dtos/trait-attribute-dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts"
       ],
+      "../src/dtos/trait-set.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/dtos/trait-attribute-dto.ts"
+      ],
       "../src/dtos/trait.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
-        "../src/dtos/trait-attribute-dto.ts",
-        "../src/entities/trait-attribute.entity.ts"
+        "../src/dtos/trait-set.dto.ts"
       ],
       "../src/dtos/ultimate-attribute-dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -6021,12 +6035,19 @@
       "../src/entities/trait-attribute.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/attribute-kind.entity.ts",
+        "../src/entities/trait-set.entity.ts",
+        "../src/entities/trait.entity.ts"
+      ],
+      "../src/entities/trait-set.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/trait-attribute.entity.ts",
         "../src/entities/trait.entity.ts"
       ],
       "../src/entities/trait.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/champion.entity.ts",
-        "../src/entities/trait-attribute.entity.ts"
+        "../src/entities/trait-attribute.entity.ts",
+        "../src/entities/trait-set.entity.ts"
       ],
       "../src/entities/ultimate-attribute.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -6114,7 +6135,9 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/dtos/trait.dto.ts",
+        "../src/entities/attribute-kind.entity.ts",
         "../src/entities/trait-attribute.entity.ts",
+        "../src/entities/trait-set.entity.ts",
         "../src/entities/trait.entity.ts"
       ]
     },
@@ -8572,8 +8595,11 @@
         "../src/dtos/trait.dto.ts",
         "../src/dtos/ultimate.dto.ts"
       ],
-      "../src/dtos/trait.dto.ts": [
+      "../src/dtos/trait-set.dto.ts": [
         "../src/dtos/trait-attribute-dto.ts"
+      ],
+      "../src/dtos/trait.dto.ts": [
+        "../src/dtos/trait-set.dto.ts"
       ],
       "../src/dtos/ultimate-attribute-dto.ts": [
         "../src/dtos/attribute-kind.dto.ts"
@@ -8597,11 +8623,15 @@
       ],
       "../src/entities/trait-attribute.entity.ts": [
         "../src/entities/attribute-kind.entity.ts",
+        "../src/entities/trait-set.entity.ts"
+      ],
+      "../src/entities/trait-set.entity.ts": [
+        "../src/entities/trait-attribute.entity.ts",
         "../src/entities/trait.entity.ts"
       ],
       "../src/entities/trait.entity.ts": [
         "../src/entities/champion.entity.ts",
-        "../src/entities/trait-attribute.entity.ts"
+        "../src/entities/trait-set.entity.ts"
       ],
       "../src/entities/ultimate-attribute.entity.ts": [
         "../src/entities/attribute-kind.entity.ts",
@@ -9323,6 +9353,7 @@
       "../src/dtos/champion-attribute.dto.ts",
       "../src/dtos/champion.dto.ts",
       "../src/dtos/trait-attribute-dto.ts",
+      "../src/dtos/trait-set.dto.ts",
       "../src/dtos/trait.dto.ts",
       "../src/dtos/ultimate-attribute-dto.ts",
       "../src/dtos/ultimate.dto.ts",
@@ -9330,6 +9361,7 @@
       "../src/entities/champion-attribute.entity.ts",
       "../src/entities/champion.entity.ts",
       "../src/entities/trait-attribute.entity.ts",
+      "../src/entities/trait-set.entity.ts",
       "../src/entities/trait.entity.ts",
       "../src/entities/ultimate-attribute.entity.ts",
       "../src/entities/ultimate.entity.ts",

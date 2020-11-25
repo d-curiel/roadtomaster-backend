@@ -15,11 +15,11 @@ class TraitAttributeDto {
 }
 __decorate([
     swagger_1.ApiProperty(),
-    __metadata("design:type", String)
-], TraitAttributeDto.prototype, "tier", void 0);
+    __metadata("design:type", Number)
+], TraitAttributeDto.prototype, "value", void 0);
 __decorate([
     swagger_1.ApiProperty(),
     __metadata("design:type", Number)
-], TraitAttributeDto.prototype, "value", void 0);
+], TraitAttributeDto.prototype, "kind", void 0);
 exports.TraitAttributeDto = TraitAttributeDto;
 //# sourceMappingURL=trait-attribute-dto.js.map

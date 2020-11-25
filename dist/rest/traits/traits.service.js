@@ -16,7 +16,9 @@ exports.TraitsService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const trait_dto_1 = require("../../dtos/trait.dto");
+const attribute_kind_entity_1 = require("../../entities/attribute-kind.entity");
 const trait_attribute_entity_1 = require("../../entities/trait-attribute.entity");
+const trait_set_entity_1 = require("../../entities/trait-set.entity");
 const trait_entity_1 = require("../../entities/trait.entity");
 const typeorm_2 = require("typeorm");
 let TraitsService = class TraitsService {
@@ -33,7 +35,7 @@ let TraitsService = class TraitsService {
             await queryRunner.commitTransaction();
         }
         catch (err) {
-            console.log("ERROR", err);
+            console.log('ERROR', err);
             await queryRunner.rollbackTransaction();
         }
         finally {
@@ -44,11 +46,20 @@ let TraitsService = class TraitsService {
         return this.traitRepository.find();
     }
     toEntity(trait) {
-        let traitEntity = new trait_entity_1.Trait(trait.name, trait.description, trait.icon, trait.kind);
-        traitEntity.attributes = [];
-        trait.attributes.forEach(traitAttributeDto => {
-            traitEntity.attributes.push(new trait_attribute_entity_1.TraitAttribute(traitAttributeDto.tier, traitAttributeDto.value));
+        let sets = [];
+        trait.sets.forEach(set => {
+            let setEntity = new trait_set_entity_1.TraitSet(set.min, set.max, set.tier);
+            setEntity.attributes = [];
+            set.attributes.forEach(traitAttributeDto => {
+                let attribute = new trait_attribute_entity_1.TraitAttribute(traitAttributeDto.value);
+                attribute.kind = new attribute_kind_entity_1.AttributeKind(null, null, null);
+                attribute.kind.id = traitAttributeDto.kind;
+                setEntity.attributes.push(attribute);
+            });
+            sets.push(setEntity);
         });
+        let traitEntity = new trait_entity_1.Trait(trait.name, trait.description, trait.icon, trait.kind, sets);
+        console.log("TRAIT", traitEntity);
         return traitEntity;
     }
 };

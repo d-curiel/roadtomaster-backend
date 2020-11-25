@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TraitDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
-const trait_attribute_entity_1 = require("../entities/trait-attribute.entity");
+const trait_set_dto_1 = require("./trait-set.dto");
 class TraitDto {
 }
 __decorate([
@@ -35,8 +35,8 @@ __decorate([
     __metadata("design:type", String)
 ], TraitDto.prototype, "kind", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    swagger_1.ApiProperty({ type: () => [trait_set_dto_1.TraitSetDto] }),
     __metadata("design:type", Array)
-], TraitDto.prototype, "attributes", void 0);
+], TraitDto.prototype, "sets", void 0);
 exports.TraitDto = TraitDto;
 //# sourceMappingURL=trait.dto.js.map

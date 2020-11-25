@@ -9,15 +9,17 @@ import {
 } from 'typeorm';
 import { Champion } from './champion.entity';
 import { TraitAttribute } from './trait-attribute.entity';
+import { TraitSet } from './trait-set.entity';
 
 @Entity('traits')
 export class Trait {
-  constructor(name: string, description: string, icon: string, kind: string) {
+  constructor(name: string, description: string, icon: string, kind: string, sets: TraitSet[]) {
     this.id = null;
     this.name = name;
     this.description = description;
     this.icon = icon;
     this.kind = kind;
+    this.sets = sets;
   }
 
   @PrimaryGeneratedColumn()
@@ -52,9 +54,10 @@ export class Trait {
 
   
   @OneToMany(
-    () => TraitAttribute,
-    traitAttribute => traitAttribute.trait,
-    { cascade: ['insert'] },
+    () => TraitSet,
+    set => set.trait,
+    {
+      eager: true,cascade:['insert']}
   )
-  attributes: TraitAttribute[];
+  sets: TraitSet[];
 }

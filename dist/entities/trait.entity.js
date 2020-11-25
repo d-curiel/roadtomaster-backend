@@ -12,14 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Trait = void 0;
 const typeorm_1 = require("typeorm");
 const champion_entity_1 = require("./champion.entity");
-const trait_attribute_entity_1 = require("./trait-attribute.entity");
+const trait_set_entity_1 = require("./trait-set.entity");
 let Trait = class Trait {
-    constructor(name, description, icon, kind) {
+    constructor(name, description, icon, kind, sets) {
         this.id = null;
         this.name = name;
         this.description = description;
         this.icon = icon;
         this.kind = kind;
+        this.sets = sets;
     }
 };
 __decorate([
@@ -58,12 +59,14 @@ __decorate([
     __metadata("design:type", Array)
 ], Trait.prototype, "champions", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => trait_attribute_entity_1.TraitAttribute, traitAttribute => traitAttribute.trait, { cascade: ['insert'] }),
+    typeorm_1.OneToMany(() => trait_set_entity_1.TraitSet, set => set.trait, {
+        eager: true, cascade: ['insert']
+    }),
     __metadata("design:type", Array)
-], Trait.prototype, "attributes", void 0);
+], Trait.prototype, "sets", void 0);
 Trait = __decorate([
     typeorm_1.Entity('traits'),
-    __metadata("design:paramtypes", [String, String, String, String])
+    __metadata("design:paramtypes", [String, String, String, String, Array])
 ], Trait);
 exports.Trait = Trait;
 //# sourceMappingURL=trait.entity.js.map

@@ -19,6 +19,7 @@ const trait_attribute_entity_1 = require("./entities/trait-attribute.entity");
 const ultimate_attribute_entity_1 = require("./entities/ultimate-attribute.entity");
 const attribute_kind_module_1 = require("./rest/attribute-kind/attribute-kind.module");
 const champions_module_1 = require("./rest/champions/champions.module");
+const trait_set_entity_1 = require("./entities/trait-set.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -31,7 +32,7 @@ AppModule = __decorate([
                 username: 'loldev',
                 password: '123456',
                 database: 'roadtomaster_dev',
-                entities: [champion_entity_1.Champion, ultimate_entity_1.Ultimate, attribute_kind_entity_1.AttributeKind, champion_attribute_entity_1.ChampionAttribute, trait_entity_1.Trait, trait_attribute_entity_1.TraitAttribute, ultimate_attribute_entity_1.UltimateAttribute],
+                entities: [champion_entity_1.Champion, ultimate_entity_1.Ultimate, attribute_kind_entity_1.AttributeKind, champion_attribute_entity_1.ChampionAttribute, trait_entity_1.Trait, trait_attribute_entity_1.TraitAttribute, ultimate_attribute_entity_1.UltimateAttribute, trait_set_entity_1.TraitSet],
                 synchronize: false,
             }), champions_module_1.ChampionsModule, attribute_kind_module_1.AttributeKindModule, traits_module_1.TraitsModule
         ],

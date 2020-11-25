@@ -10,6 +10,7 @@ import { TraitAttribute } from './entities/trait-attribute.entity';
 import { UltimateAttribute } from './entities/ultimate-attribute.entity';
 import { AttributeKindModule } from './rest/attribute-kind/attribute-kind.module';
 import { ChampionsModule } from './rest/champions/champions.module';
+import { TraitSet } from './entities/trait-set.entity';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { ChampionsModule } from './rest/champions/champions.module';
       username: 'loldev',
       password: '123456',
       database: 'roadtomaster_dev',
-      entities: [Champion, Ultimate, AttributeKind, ChampionAttribute, Trait, TraitAttribute, UltimateAttribute],
+      entities: [Champion, Ultimate, AttributeKind, ChampionAttribute, Trait, TraitAttribute, UltimateAttribute, TraitSet],
       synchronize: false,
     }),ChampionsModule, AttributeKindModule, TraitsModule],
   controllers: [],

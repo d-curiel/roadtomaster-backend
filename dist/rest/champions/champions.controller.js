@@ -53,7 +53,7 @@ let ChampionsController = class ChampionsController {
         });
         let traits = [];
         champion.traits.forEach(trait => {
-            let traitEntity = new trait_entity_1.Trait(null, null, null, null);
+            let traitEntity = new trait_entity_1.Trait(null, null, null, null, null);
             traitEntity.id = trait.id;
             traits.push(traitEntity);
         });

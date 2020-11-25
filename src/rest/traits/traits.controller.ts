@@ -1,6 +1,6 @@
 import { Body, Controller } from '@nestjs/common';
 import { Get, Post } from '@nestjs/common/decorators/http/request-mapping.decorator';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { TraitDto } from 'src/dtos/trait.dto';
 import { TraitsService } from './traits.service';
 
@@ -15,6 +15,7 @@ findAll(){
   return this.traitService.findAll();
 }
 @Post()
+@ApiBody({ type: [TraitDto] })
   create(@Body() trait: TraitDto) {
       this.traitService.create(trait);
   }

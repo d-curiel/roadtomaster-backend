@@ -1,12 +1,12 @@
 import { Champion } from './champion.entity';
-import { TraitAttribute } from './trait-attribute.entity';
+import { TraitSet } from './trait-set.entity';
 export declare class Trait {
-    constructor(name: string, description: string, icon: string, kind: string);
+    constructor(name: string, description: string, icon: string, kind: string, sets: TraitSet[]);
     id: number;
     name: string;
     description: string;
     icon: string;
     kind: string;
     champions: Champion[];
-    attributes: TraitAttribute[];
+    sets: TraitSet[];
 }

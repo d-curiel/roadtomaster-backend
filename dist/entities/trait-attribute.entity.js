@@ -12,10 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TraitAttribute = void 0;
 const typeorm_1 = require("typeorm");
 const attribute_kind_entity_1 = require("./attribute-kind.entity");
-const trait_entity_1 = require("./trait.entity");
+const trait_set_entity_1 = require("./trait-set.entity");
 let TraitAttribute = class TraitAttribute {
-    constructor(tier, value) {
-        this.tier = tier;
+    constructor(value) {
         this.value = value;
     }
 };
@@ -23,10 +22,6 @@ __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], TraitAttribute.prototype, "id", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], TraitAttribute.prototype, "tier", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Number)
@@ -41,15 +36,15 @@ __decorate([
     __metadata("design:type", attribute_kind_entity_1.AttributeKind)
 ], TraitAttribute.prototype, "kind", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => trait_entity_1.Trait, trait => trait.attributes),
+    typeorm_1.ManyToOne(() => trait_set_entity_1.TraitSet, trait => trait.attributes),
     typeorm_1.JoinColumn({
-        name: 'id_trait',
+        name: 'id_trait_set',
     }),
-    __metadata("design:type", trait_entity_1.Trait)
-], TraitAttribute.prototype, "trait", void 0);
+    __metadata("design:type", trait_set_entity_1.TraitSet)
+], TraitAttribute.prototype, "set", void 0);
 TraitAttribute = __decorate([
     typeorm_1.Entity('trait_attributes'),
-    __metadata("design:paramtypes", [Object, Object])
+    __metadata("design:paramtypes", [Object])
 ], TraitAttribute);
 exports.TraitAttribute = TraitAttribute;
 //# sourceMappingURL=trait-attribute.entity.js.map
